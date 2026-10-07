@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Solutions with Az'Ha | Meta Ads Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        techDark: '#040b19',
+                        techCard: '#0a1733',
+                        techBorder: '#122b5e',
+                        cyanGlow: '#00d2ff',
+                        blueGlow: '#0052d4'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Tech Animations & Visual Styling -->
+    <style>
+        body {
+            background-color: #040b19;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 82, 212, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(4, 11, 25, 1) 0%, transparent 100%);
+            background-attachment: fixed;
+        }
+
+        /* Tech circuit background lines overlay */
+        .tech-grid-bg {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Glow effects */
+        .glow-cyan-box {
+            box-shadow: 0 0 25px -5px rgba(0, 210, 255, 0.3);
+        }
+        
+        .glow-cyan-text {
+            text-shadow: 0 0 12px rgba(0, 210, 255, 0.6);
+        }
+
+        .tech-border-glow {
+            border: 1px solid rgba(0, 210, 255, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .tech-border-glow:hover {
+            border-color: rgba(0, 210, 255, 0.8);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Pulsing WhatsApp button */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.9); }
+        }
+        .whatsapp-float-btn {
+            animation: pulse-glow 2.5s infinite;
+        }
+    </style>
+</head>
+<body class="text-slate-200 antialiased tech-grid-bg selection:bg-cyanGlow selection:text-slate-900">
+
+    <header class="sticky top-0 z-50 bg-techDark/90 backdrop-blur-md border-b border-techBorder/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="relative w-12 h-12 rounded-xl overflow-hidden border border-cyanGlow/40 p-1 bg-techDark/80 group-hover:border-cyanGlow transition">
+                    <!-- Embedded fallback icon if logo.png isn't available locally yet -->
+                    <img src="logo.png" alt="Marketing Solutions with Az'Ha Logo" class="w-full h-full object-contain rounded-lg" onerror="this.onerror=null; this.src='https://placehold.co/200x200/0a1733/00d2ff?text=Az%27Ha';">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-tech text-base sm:text-lg font-bold text-white tracking-wide group-hover:text-cyanGlow transition">
+                        AZ'HA
+                    </span>
+                    <span class="text-[10px] tracking-widest uppercase font-semibold text-cyanGlow/80">
+                        Marketing Solutions
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex space-x-8 font-medium text-sm text-slate-300">
+                <a href="#about" class="hover:text-cyanGlow transition py-1">About</a>
+                <a href="#services" class="hover:text-cyanGlow transition py-1">Services</a>
+                <a href="#why-us" class="hover:text-cyanGlow transition py-1">Why Us</a>
+                <a href="#pricing" class="hover:text-cyanGlow transition py-1">Pricing</a>
+                <a href="#contact" class="hover:text-cyanGlow transition py-1">Contact</a>
+            </nav>
+
+            <!-- Direct WhatsApp CTA Button -->
+            <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I%20want%20to%20scale%20my%20business%20with%20Meta%20Ads!" 
+               target="_blank" 
+               class="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-full transition shadow-lg shadow-cyan-500/20">
+                <i class="fa-brands fa-whatsapp text-lg text-slate-950"></i>
+                <span>Let's Talk</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="relative py-20 lg:py-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-techCard border border-cyanGlow/30 text-cyanGlow text-xs font-semibold uppercase tracking-widest mb-8 glow-cyan-box">
+                    <span class="w-2 h-2 rounded-full bg-cyanGlow animate-ping"></span>
+                    <span>Meta Ads & Growth Marketing Specialist</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-4xl sm:text-6xl font-extrabold font-tech tracking-tight text-white mb-6 leading-tight">
+                    Dominate Your Market With High-ROI <span class="bg-gradient-to-r from-cyanGlow via-blue-400 to-indigo-400 bg-clip-text text-transparent glow-cyan-text">Meta Ads</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-base sm:text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    At <strong class="text-white">Marketing Solutions with Az'Ha</strong>, we engineer targeted Facebook & Instagram ad campaigns that drive real sales, high-value leads, and exponential business growth.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I'd%20like%20a%20free%20strategy%20session%20for%20my%20business." 
+                       target="_blank" 
+                       class="w-full sm:w-auto bg-gradient-to-r from-cyanGlow to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-cyan-500/25 flex items-center justify-center space-x-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Claim Free Consultation</span>
+                    </a>
+                    
+                    <a href="#services" 
+                       class="w-full sm:w-auto bg-techCard hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-techBorder transition flex items-center justify-center space-x-2">
+                        <span>Our Services</span>
+                        <i class="fa-solid fa-chevron-right text-xs text-cyanGlow"></i>
+                    </a>
+                </div>
+
+                <!-- Key Metrics Bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-12 border-t border-techBorder/60 text-center">
+                    <div>
+                        <div class="font-tech text-3xl font-bold text-cyanGlow">3.5x+</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Average ROAS</div>
+                    </div>
+                    <div>
+                        <div class="font-tech text-3xl font-bold text-cyanGlow">100%</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Data-Driven</div>
+                    </div>
+                    <div>
+                        <div class="font-tech text-3xl font-bold text-cyanGlow">24/7</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Ad Optimization</div>
+                    </div>
+                    <div>
+                        <div class="font-tech text-3xl font-bold text-cyanGlow">Verified</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Meta Pixel & CAPI</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-techCard/40 border-y border-techBorder/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyanGlow font-tech text-xs tracking-widest uppercase font-bold">Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-tech text-white mt-2 mb-4">Precision Services Built For Scaling</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Customized performance marketing strategies designed to convert viewers into loyal paying customers.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="bg-techCard p-6 rounded-2xl tech-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-cyanGlow/10 border border-cyanGlow/30 rounded-xl flex items-center justify-center text-cyanGlow mb-6 text-xl">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-tech mb-3">Meta Ads Campaign Setup</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Full-funnel campaign creation on Facebook & Instagram targeting buyers with ready-to-buy intent.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-techBorder/60 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> Custom Ad Copy & Creatives</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> Laser Audience Targeting</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-techCard p-6 rounded-2xl tech-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-cyanGlow/10 border border-cyanGlow/30 rounded-xl flex items-center justify-center text-cyanGlow mb-6 text-xl">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-tech mb-3">Lead Generation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Generate consistent, high-converting leads for real estate, e-commerce, B2B, and service businesses.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-techBorder/60 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> Instant Lead Forms</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> High Lead Quality Filter</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-techCard p-6 rounded-2xl tech-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-cyanGlow/10 border border-cyanGlow/30 rounded-xl flex items-center justify-center text-cyanGlow mb-6 text-xl">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-tech mb-3">Pixel & CAPI Tracking</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Accurate data tracking with Meta Pixel and Conversions API (CAPI) setup to overcome iOS tracking limitations.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-techBorder/60 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> iOS14+ Fix & CAPI Integration</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> Custom Event Tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-techCard p-6 rounded-2xl tech-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-cyanGlow/10 border border-cyanGlow/30 rounded-xl flex items-center justify-center text-cyanGlow mb-6 text-xl">
+                            <i class="fa-solid fa-rotate text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-tech mb-3">Retargeting & Scaling</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Re-engage past visitors and customers while scaling your budget safely without increasing acquisition costs.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-techBorder/60 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> Custom & Lookalike Audiences</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-2"></i> Daily Budget Optimization</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-cyanGlow font-tech text-xs tracking-widest uppercase font-bold">Why Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold font-tech text-white mt-2 mb-6">
+                        Why Choose <span class="text-cyanGlow">Marketing Solutions with Az'Ha</span>?
+                    </h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed text-sm sm:text-base">
+                        Running ads without strategy drains your budget. We focus on ROI-driven campaigns, testing different ad variations, creatives, and audiences to find the winning formula for your brand.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-cyanGlow/10 rounded-xl border border-cyanGlow/30 text-cyanGlow mt-1">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold font-tech text-base">Proven ROAS Focus</h4>
+                                <p class="text-slate-400 text-sm mt-1">We optimize campaigns for bottom-line profit, not just vanity metrics like clicks or impressions.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-cyanGlow/10 rounded-xl border border-cyanGlow/30 text-cyanGlow mt-1">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold font-tech text-base">End-to-End Campaign Management</h4>
+                                <p class="text-slate-400 text-sm mt-1">From ad design and copywriting to strategy, setup, and daily tracking—we handle everything.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-cyanGlow/10 rounded-xl border border-cyanGlow/30 text-cyanGlow mt-1">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold font-tech text-base">Transparent Weekly Reports</h4>
+                                <p class="text-slate-400 text-sm mt-1">Clear insights showing exact spend, conversion costs, sales, and next scaling steps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Feature Card -->
+                <div class="relative">
+                    <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyanGlow to-blueGlow opacity-30 blur-xl"></div>
+                    <div class="relative bg-techCard p-8 rounded-3xl border border-techBorder text-center">
+                        
+                        <div class="w-20 h-20 mx-auto mb-6 rounded-2xl border border-cyanGlow/50 p-2 bg-techDark">
+                            <img src="logo.png" alt="Az'Ha Logo" class="w-full h-full object-contain rounded-xl" onerror="this.onerror=null; this.src='https://placehold.co/200x200/0a1733/00d2ff?text=Az%27Ha';">
+                        </div>
+
+                        <h3 class="text-2xl font-bold font-tech text-white mb-2">Ready To Multiply Your Sales?</h3>
+                        <p class="text-slate-400 text-sm mb-6 max-w-sm mx-auto">
+                            Send us a message on WhatsApp for a free audit of your current ad strategy.
+                        </p>
+
+                        <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I'm%20ready%20to%20discuss%20a%20custom%20Meta%20Ads%20plan." 
+                           target="_blank" 
+                           class="inline-flex items-center space-x-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-lg shadow-emerald-500/20">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Chat Directly (+92 303 8720939)</span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-techCard/30 border-t border-techBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-cyanGlow font-tech text-xs tracking-widest uppercase font-bold">Packages</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-tech text-white mt-2 mb-4">Transparent Service Plans</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Choose the right management package tailored to your business stage.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Package 1: Starter -->
+                <div class="bg-techCard p-8 rounded-2xl tech-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="text-cyanGlow font-tech text-sm uppercase tracking-wider mb-2">Starter Package</div>
+                        <h3 class="text-2xl font-bold font-tech text-white mb-4">Ad Campaign Setup</h3>
+                        <p class="text-slate-400 text-xs mb-6">Ideal for small businesses starting with Facebook & Instagram advertising.</p>
+                        
+                        <ul class="text-sm text-slate-300 space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> 1 Campaign Setup</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Target Audience Research</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Ad Copywriting & Design</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Meta Pixel Integration</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> 7 Days Campaign Monitoring</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I'm%20interested%20in%20the%20Starter%20Package." 
+                       target="_blank" 
+                       class="w-full bg-techDark hover:bg-slate-800 text-cyanGlow font-semibold py-3 rounded-xl border border-cyanGlow/40 transition text-center block text-sm">
+                        Select Starter Plan
+                    </a>
+                </div>
+
+                <!-- Package 2: Growth (Featured) -->
+                <div class="bg-gradient-to-b from-techCard to-slate-900 p-8 rounded-2xl border-2 border-cyanGlow glow-cyan-box relative flex flex-col justify-between">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-cyanGlow text-slate-950 font-tech text-[10px] uppercase font-extrabold px-3 py-1 rounded-full">
+                        Most Popular
+                    </div>
+
+                    <div>
+                        <div class="text-cyanGlow font-tech text-sm uppercase tracking-wider mb-2">Growth Package</div>
+                        <h3 class="text-2xl font-bold font-tech text-white mb-4">Monthly Ad Growth</h3>
+                        <p class="text-slate-400 text-xs mb-6">For brands looking for continuous lead generation and consistent sales.</p>
+                        
+                        <ul class="text-sm text-slate-200 space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Multiple Campaign Management</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> A/B Creative & Copy Testing</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Pixel + CAPI Advanced Setup</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Retargeting Campaigns</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Weekly Reporting & Optimization</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I'm%20interested%20in%20the%20Growth%20Package." 
+                       target="_blank" 
+                       class="w-full bg-cyanGlow hover:bg-cyan-400 text-slate-950 font-bold py-3 rounded-xl transition text-center block text-sm shadow-lg shadow-cyan-500/30">
+                        Select Growth Plan
+                    </a>
+                </div>
+
+                <!-- Package 3: Custom Scale -->
+                <div class="bg-techCard p-8 rounded-2xl tech-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="text-cyanGlow font-tech text-sm uppercase tracking-wider mb-2">Scale Package</div>
+                        <h3 class="text-2xl font-bold font-tech text-white mb-4">Full Digital Suite</h3>
+                        <p class="text-slate-400 text-xs mb-6">High-volume ad scaling for established brands and agencies.</p>
+                        
+                        <ul class="text-sm text-slate-300 space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Unlimited Meta Campaign Scaling</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Lookalike Audience Expansion</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Dedicated Account Manager</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> High-converting Ad Funnel Design</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-cyanGlow mr-3"></i> Priority WhatsApp Support</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I'm%20interested%20in%20the%20Scale%20Package." 
+                       target="_blank" 
+                       class="w-full bg-techDark hover:bg-slate-800 text-cyanGlow font-semibold py-3 rounded-xl border border-cyanGlow/40 transition text-center block text-sm">
+                        Discuss Scale Strategy
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-techDark border-t border-techBorder/80 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center pb-8 border-b border-techBorder/60">
+                
+                <!-- Footer Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg overflow-hidden border border-cyanGlow/40 p-1 bg-techCard">
+                        <img src="logo.png" alt="Az'Ha Logo" class="w-full h-full object-contain rounded" onerror="this.onerror=null; this.src='https://placehold.co/200x200/0a1733/00d2ff?text=Az%27Ha';">
+                    </div>
+                    <div>
+                        <div class="font-tech text-white font-bold text-sm">Marketing Solutions with Az'Ha</div>
+                        <div class="text-slate-400 text-xs">Meta Advertising & Performance Growth</div>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Link -->
+                <div class="flex flex-wrap items-center md:justify-end gap-6 text-sm">
+                    <a href="tel:+923038720939" class="text-slate-300 hover:text-cyanGlow flex items-center space-x-2 transition">
+                        <i class="fa-solid fa-phone text-cyanGlow"></i>
+                        <span>+92 303 8720939</span>
+                    </a>
+                    <a href="https://wa.me/923038720939" target="_blank" class="text-slate-300 hover:text-cyanGlow flex items-center space-x-2 transition">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        <span>WhatsApp Chat</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Copyright Notice -->
+            <div class="pt-8 text-center text-xs text-slate-500 font-medium">
+                &copy; Marketing Solutions with Az'Ha. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/923038720939?text=Hi%20Az'Ha,%20I'd%20like%20to%20know%20more%20about%20your%20Meta%20Ads%20services." 
+       target="_blank" 
+       class="whatsapp-float-btn fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl transition duration-300 shadow-2xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
