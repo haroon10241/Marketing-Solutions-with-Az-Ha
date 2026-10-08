@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Solutions with Az'Ha | Meta Ads & Growth Agency</title>
+
+    <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Calendly Badge & Popup CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
     <style>
         :root {
             --bg-color: #040b19;
@@ -85,6 +91,7 @@
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -123,6 +130,13 @@
             margin-bottom: 2.5rem;
         }
 
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .cta-btn {
             display: inline-flex;
             align-items: center;
@@ -137,11 +151,24 @@
             box-shadow: var(--glow);
             border: none;
             cursor: pointer;
+            font-size: 1rem;
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 30px rgba(0, 210, 255, 0.7);
+        }
+
+        .cta-btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-cyan);
+            color: var(--primary-cyan);
+            box-shadow: none;
+        }
+
+        .cta-btn-outline:hover {
+            background: rgba(0, 210, 255, 0.1);
+            color: #fff;
         }
 
         .services {
@@ -207,13 +234,6 @@
             font-size: 0.95rem;
         }
 
-        .booking-section {
-            padding: 80px 2rem;
-            text-align: center;
-            background: rgba(4, 11, 25, 0.8);
-            border-top: 1px solid rgba(0, 210, 255, 0.1);
-        }
-
         .contact-section {
             padding: 80px 2rem;
             text-align: center;
@@ -269,8 +289,12 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#schedule">Book Call</a></li>
                 <li><a href="#contact">Contact Form</a></li>
+                <li>
+                    <button onclick="openCalendlyPopup()" class="cta-btn" style="padding: 8px 20px; font-size: 0.85rem;">
+                        <i class="fas fa-calendar-alt"></i> Book Call
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -278,9 +302,15 @@
     <section class="hero">
         <h1>Scale Your Business With High-Converting Meta Ads</h1>
         <p>We craft targeted Facebook & Instagram Ad campaigns designed to maximize your ROI, lower customer acquisition costs, and drive predictable sales growth.</p>
-        <a href="#schedule" class="cta-btn">
-            <i class="fas fa-calendar-alt"></i> Schedule 1-on-1 Call
-        </a>
+        <div class="hero-buttons">
+            <!-- Button triggering Calendly Popup Modal -->
+            <button onclick="openCalendlyPopup()" class="cta-btn">
+                <i class="fas fa-calendar-check"></i> Schedule 1-on-1 Call
+            </button>
+            <a href="#contact" class="cta-btn cta-btn-outline">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </a>
+        </div>
     </section>
 
     <section class="services" id="services">
@@ -304,20 +334,9 @@
         </div>
     </section>
 
-    <!-- CALENDLY MEETING SCHEDULER SECTION -->
-    <section class="booking-section" id="schedule">
-        <h2 class="section-title">Book a Free Strategy Session</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Select a convenient date and time on the calendar below to schedule your 1-on-1 consultation.</p>
-        
-        <!-- Calendly Inline Widget -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/haroonishaq77/30min" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </section>
-
-    <!-- LEAD GENERATION FORM SECTION -->
     <section class="contact-section" id="contact">
         <h2 class="section-title">Send Us a Direct Message</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Prefer text? Fill out the form below and our team will respond within 24 hours.</p>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Fill out the form below and our team will get back to you within 24 hours.</p>
         
         <div style="max-width: 550px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(0, 210, 255, 0.2); text-align: left;">
             <form action="https://formspree.io/f/moejjlkl" method="POST">
@@ -351,13 +370,28 @@
         </div>
     </section>
 
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/923038720939" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Marketing Solutions with Az'Ha. All Rights Reserved.</p>
     </footer>
+
+    <!-- Calendly JavaScript SDK -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <script>
+        // Function to trigger Calendly Popup Modal on Button Click
+        function openCalendlyPopup() {
+            Calendly.initPopupWidget({
+                url: 'https://calendly.com/haroonishaq77/30min'
+            });
+            return false;
+        }
+    </script>
 
 </body>
 </html>
