@@ -207,11 +207,17 @@
             font-size: 0.95rem;
         }
 
+        .booking-section {
+            padding: 80px 2rem;
+            text-align: center;
+            background: rgba(4, 11, 25, 0.8);
+            border-top: 1px solid rgba(0, 210, 255, 0.1);
+        }
+
         .contact-section {
             padding: 80px 2rem;
             text-align: center;
             background: rgba(10, 25, 47, 0.5);
-            margin-top: 50px;
             border-top: 1px solid rgba(0, 210, 255, 0.1);
         }
 
@@ -263,6 +269,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#schedule">Book Call</a></li>
                 <li><a href="#contact">Contact Form</a></li>
             </ul>
         </nav>
@@ -271,8 +278,8 @@
     <section class="hero">
         <h1>Scale Your Business With High-Converting Meta Ads</h1>
         <p>We craft targeted Facebook & Instagram Ad campaigns designed to maximize your ROI, lower customer acquisition costs, and drive predictable sales growth.</p>
-        <a href="#contact" class="cta-btn">
-            Get Free Consultation Strategy Call
+        <a href="#schedule" class="cta-btn">
+            <i class="fas fa-calendar-alt"></i> Schedule 1-on-1 Call
         </a>
     </section>
 
@@ -297,10 +304,20 @@
         </div>
     </section>
 
+    <!-- CALENDLY MEETING SCHEDULER SECTION -->
+    <section class="booking-section" id="schedule">
+        <h2 class="section-title">Book a Free Strategy Session</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Select a convenient date and time on the calendar below to schedule your 1-on-1 consultation.</p>
+        
+        <!-- Calendly Inline Widget -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/haroonishaq77/30min" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
+
     <!-- LEAD GENERATION FORM SECTION -->
     <section class="contact-section" id="contact">
-        <h2 class="section-title">Get a Free Meta Ads Strategy Call</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Fill out the form below and our team will get back to you within 24 hours.</p>
+        <h2 class="section-title">Send Us a Direct Message</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Prefer text? Fill out the form below and our team will respond within 24 hours.</p>
         
         <div style="max-width: 550px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(0, 210, 255, 0.2); text-align: left;">
             <form action="https://formspree.io/f/moejjlkl" method="POST">
