@@ -3,51 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Solutions with Az'Ha | Meta Ads & Growth Agency</title>
-    <!-- FontAwesome Icons -->
+    <title>Marketing Solutions with Az'Ha | Meta Ads Agency</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Calendly Widget CSS -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #040b19;
-            --card-bg: rgba(10, 25, 47, 0.7);
-            --primary-cyan: #00d2ff;
-            --accent-blue: #0072ff;
-            --text-main: #e2e8f0;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #0284c7;
+            --accent-hover: #0369a1;
+            --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --glow: 0 0 20px rgba(0, 210, 255, 0.4);
-            --chat-bg: #091930;
-            --chat-border: rgba(0, 210, 255, 0.25);
+            --border-color: #334155;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.6;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 210, 255, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(0, 114, 255, 0.05) 0%, transparent 40%);
-            background-attachment: fixed;
-            min-height: 100vh;
         }
 
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(4, 11, 25, 0.9);
-            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+            border-bottom: 1px solid var(--border-color);
         }
 
         nav {
@@ -67,24 +58,22 @@
         }
 
         .logo-img {
-            height: 48px;
+            height: 44px;
             width: auto;
             object-fit: contain;
-            border-radius: 6px;
-            border: none;
-            box-shadow: none;
+            border-radius: 4px;
         }
 
         .logo-text {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .logo-text span {
-            color: var(--primary-cyan);
+            color: var(--accent-blue);
         }
 
         .nav-links {
@@ -94,60 +83,124 @@
         }
 
         .nav-links a {
-            color: var(--text-main);
+            color: var(--text-muted);
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.2s;
             font-size: 0.95rem;
             font-weight: 500;
         }
 
         .nav-links a:hover {
-            color: var(--primary-cyan);
-            text-shadow: var(--glow);
+            color: #ffffff;
         }
 
         .hero {
-            padding: 180px 2rem 100px;
+            padding: 160px 2rem 80px;
             text-align: center;
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
-            position: relative;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, var(--primary-cyan) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+            font-weight: 800;
+            line-height: 1.25;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         .cta-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
+            background: var(--accent-blue);
             color: #fff;
-            padding: 14px 32px;
-            border-radius: 30px;
+            padding: 13px 28px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
-            box-shadow: var(--glow);
+            transition: 0.2s;
             border: none;
             cursor: pointer;
+            font-size: 1rem;
         }
 
         .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(0, 210, 255, 0.7);
+            background: var(--accent-hover);
+        }
+
+        /* ROAS CALCULATOR SECTION */
+        .calculator-section {
+            padding: 80px 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .calc-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .calc-slider-container {
+            margin: 2rem 0;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #334155;
+            outline: none;
+            accent-color: var(--accent-blue);
+            cursor: pointer;
+        }
+
+        .calc-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .result-box {
+            background: #0f172a;
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .result-box h4 {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-box p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #38bdf8;
         }
 
         .services {
@@ -158,21 +211,10 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
             color: #fff;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-cyan);
-            margin: 10px auto 0;
-            border-radius: 2px;
-            box-shadow: var(--glow);
+            font-weight: 700;
         }
 
         .services-grid {
@@ -183,29 +225,26 @@
 
         .service-card {
             background: var(--card-bg);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            padding: 2.5rem 2rem;
-            border-radius: 15px;
-            transition: 0.3s;
-            backdrop-filter: blur(5px);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: 0.2s;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-cyan);
-            box-shadow: var(--glow);
+            border-color: var(--accent-blue);
         }
 
         .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-cyan);
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             color: #fff;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .service-card p {
@@ -216,8 +255,8 @@
         .contact-section {
             padding: 80px 2rem;
             text-align: center;
-            background: rgba(10, 25, 47, 0.5);
-            border-top: 1px solid rgba(0, 210, 255, 0.1);
+            background: #0b1120;
+            border-top: 1px solid var(--border-color);
         }
 
         .whatsapp-float {
@@ -226,384 +265,57 @@
             right: 30px;
             background-color: #25d366;
             color: #fff;
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 999;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
             text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            border-top: 1px solid rgba(0, 210, 255, 0.15);
-            background: rgba(4, 11, 25, 0.95);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background: #0f172a;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
         }
 
         .social-btn {
-            width: 50px;
-            height: 50px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            background: rgba(10, 25, 47, 0.8);
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            color: var(--primary-cyan);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
         }
 
         .social-btn:hover {
-            transform: translateY(-5px);
-            color: #ffffff;
-            border-color: var(--primary-cyan);
-            box-shadow: var(--glow);
-        }
-
-        .social-btn.facebook:hover {
-            background: #1877f2;
-        }
-
-        .social-btn.instagram:hover {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-
-        .chat-toggle-btn {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            color: #fff;
-            border: none;
-            font-size: 26px;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.5);
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .chat-toggle-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(0, 210, 255, 0.8);
-        }
-
-        .chat-badge {
-            position: absolute;
-            top: -2px;
-            right: -2px;
-            background: #ff3b30;
-            color: #fff;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 10px;
-            border: 2px solid var(--bg-color);
-            animation: pulse-badge 2s infinite;
-        }
-
-        @keyframes pulse-badge {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-
-        .chat-window {
-            position: fixed;
-            bottom: 100px;
-            left: 30px;
-            width: 370px;
-            max-width: calc(100vw - 40px);
-            height: 520px;
-            max-height: calc(100vh - 120px);
-            background: var(--chat-bg);
-            border: 1px solid var(--chat-border);
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), var(--glow);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(20px) scale(0.95);
-            pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .chat-window.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            pointer-events: all;
-        }
-
-        .chat-header {
-            background: rgba(4, 11, 25, 0.95);
-            padding: 15px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--chat-border);
-        }
-
-        .chat-header-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .chat-avatar {
-            position: relative;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        .chat-online-dot {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 10px;
-            height: 10px;
-            background: #25d366;
-            border: 2px solid var(--chat-bg);
-            border-radius: 50%;
-        }
-
-        .chat-title-text h4 {
-            font-size: 0.95rem;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .chat-title-text p {
-            font-size: 0.75rem;
-            color: var(--primary-cyan);
-            margin-top: -2px;
-        }
-
-        .chat-close-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .chat-close-btn:hover {
-            color: #fff;
-        }
-
-        .chat-body {
-            flex: 1;
-            padding: 16px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            scroll-behavior: smooth;
-        }
-
-        .chat-body::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        .chat-body::-webkit-scrollbar-thumb {
-            background: rgba(0, 210, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        .chat-message {
-            display: flex;
-            gap: 10px;
-            max-width: 85%;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .chat-message.bot {
-            align-self: flex-start;
-        }
-
-        .chat-message.user {
-            align-self: flex-end;
-            flex-direction: row-reverse;
-        }
-
-        .message-bubble {
-            padding: 11px 15px;
-            border-radius: 14px;
-            font-size: 0.88rem;
-            line-height: 1.45;
-            word-wrap: break-word;
-        }
-
-        .chat-message.bot .message-bubble {
-            background: rgba(10, 25, 47, 0.9);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            color: var(--text-main);
-            border-top-left-radius: 3px;
-        }
-
-        .chat-message.user .message-bubble {
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            color: #fff;
-            border-top-right-radius: 3px;
-        }
-
-        .chat-options-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 6px;
-        }
-
-        .chat-opt-btn {
-            background: rgba(0, 210, 255, 0.1);
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            color: var(--primary-cyan);
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 0.78rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .chat-opt-btn:hover {
-            background: var(--primary-cyan);
-            color: #040b19;
-            font-weight: 600;
-            box-shadow: var(--glow);
-        }
-
-        .typing-indicator {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 10px 14px;
-            background: rgba(10, 25, 47, 0.9);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            border-radius: 14px;
-            border-top-left-radius: 3px;
-            width: fit-content;
-        }
-
-        .typing-dot {
-            width: 6px;
-            height: 6px;
-            background: var(--primary-cyan);
-            border-radius: 50%;
-            animation: typingBounce 1.4s infinite ease-in-out both;
-        }
-
-        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
-        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes typingBounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
-        }
-
-        .chat-footer {
-            padding: 12px;
-            background: rgba(4, 11, 25, 0.95);
-            border-top: 1px solid var(--chat-border);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .chat-input {
-            flex: 1;
-            background: rgba(10, 25, 47, 0.8);
-            border: 1px solid rgba(0, 210, 255, 0.25);
-            border-radius: 20px;
-            padding: 10px 15px;
-            color: #fff;
-            font-size: 0.88rem;
-            outline: none;
-            transition: 0.2s;
-        }
-
-        .chat-input:focus {
-            border-color: var(--primary-cyan);
-            box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
-        }
-
-        .chat-send-btn {
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            color: #fff;
-            border: none;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .chat-send-btn:hover {
-            transform: scale(1.05);
-            box-shadow: var(--glow);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2rem; }
             .nav-links { display: none; }
-            .chat-window {
-                left: 15px;
-                bottom: 90px;
-                width: calc(100vw - 30px);
-            }
-            .chat-toggle-btn {
-                left: 20px;
-                bottom: 20px;
-            }
-            .whatsapp-float {
-                right: 20px;
-                bottom: 20px;
-            }
         }
     </style>
 </head>
@@ -616,23 +328,61 @@
                 <div class="logo-text">Marketing Solutions <span>With Az'Ha</span></div>
             </a>
             <ul class="nav-links">
+                <li><a href="#calculator">ROI Calculator</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;">Book Call</a></li>
-                <li><a href="#contact">Contact Form</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Scale Your Business With High-Converting Meta Ads</h1>
-        <p>We craft targeted Facebook & Instagram Ad campaigns designed to maximize your ROI, lower customer acquisition costs, and drive predictable sales growth.</p>
+        <p>We craft targeted Facebook & Instagram Ad campaigns designed to maximize ROI, lower customer acquisition costs, and drive sales growth.</p>
         <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;" class="cta-btn">
             <i class="fas fa-calendar-alt"></i> Schedule 1-on-1 Strategy Call
         </button>
     </section>
 
+    <!-- ROAS / ROI CALCULATOR -->
+    <section class="calculator-section" id="calculator">
+        <h2 class="section-title">Meta Ads Growth Calculator</h2>
+        <div class="calc-card">
+            <p style="color: var(--text-muted); text-align: center; margin-bottom: 1.5rem;">Select your projected monthly ad spend to calculate estimated results with our strategy.</p>
+            
+            <div class="calc-slider-container">
+                <div class="slider-label">
+                    <span>Monthly Ad Budget:</span>
+                    <span id="budget-display" style="color: #38bdf8;">$1,000</span>
+                </div>
+                <input type="range" min="300" max="10000" step="100" value="1000" class="slider" id="budget-slider">
+            </div>
+
+            <div class="calc-results">
+                <div class="result-box">
+                    <h4>Est. Revenue Growth</h4>
+                    <p id="est-revenue">$3,500</p>
+                </div>
+                <div class="result-box">
+                    <h4>Est. Qualified Leads</h4>
+                    <p id="est-leads">45 - 70</p>
+                </div>
+                <div class="result-box">
+                    <h4>Projected ROAS</h4>
+                    <p id="est-roas">3.5x</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;" class="cta-btn" style="width: 100%; justify-content: center;">
+                    Claim This ROI Strategy
+                </button>
+            </div>
+        </div>
+    </section>
+
     <section class="services" id="services">
-        <h2 class="section-title">Our Expertise</h2>
+        <h2 class="section-title">Our Core Expertise</h2>
         <div class="services-grid">
             <div class="service-card">
                 <i class="fab fa-facebook service-icon"></i>
@@ -647,39 +397,38 @@
             <div class="service-card">
                 <i class="fas fa-bullseye service-icon"></i>
                 <h3>Retargeting Strategies</h3>
-                <p>Convert lost visitors into loyal buyers through hyper-targeted re-engagement campaigns.</p>
+                <p>Convert lost visitors into buyers through hyper-targeted re-engagement campaigns.</p>
             </div>
         </div>
     </section>
 
+    <!-- LEAD FORM SECTION -->
     <section class="contact-section" id="contact">
         <h2 class="section-title">Send Us a Direct Message</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Prefer text? Fill out the form below and our team will respond within 24 hours.</p>
-        
-        <div style="max-width: 550px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(0, 210, 255, 0.2); text-align: left;">
+        <div style="max-width: 500px; margin: 0 auto; background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color); text-align: left;">
             <form action="https://formspree.io/f/moejjlkl" method="POST">
                 <div style="margin-bottom: 1.2rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Full Name</label>
-                    <input type="text" name="name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 8px; color: #fff; outline: none;">
+                    <label style="display: block; margin-bottom: 0.4rem; font-size: 0.88rem; color: var(--text-muted);">Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your full name" required style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; outline: none;">
                 </div>
                 
                 <div style="margin-bottom: 1.2rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Email Address</label>
-                    <input type="email" name="email" placeholder="you@company.com" required style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 8px; color: #fff; outline: none;">
+                    <label style="display: block; margin-bottom: 0.4rem; font-size: 0.88rem; color: var(--text-muted);">Email Address</label>
+                    <input type="email" name="email" placeholder="you@company.com" required style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; outline: none;">
                 </div>
 
                 <div style="margin-bottom: 1.2rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Phone Number</label>
-                    <input type="tel" name="phone" placeholder="+00 000 0000000" required style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 8px; color: #fff; outline: none;">
+                    <label style="display: block; margin-bottom: 0.4rem; font-size: 0.88rem; color: var(--text-muted);">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="+00 000 0000000" required style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; outline: none;">
                 </div>
 
                 <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Monthly Ad Budget ($)</label>
-                    <select name="budget" style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 8px; color: #fff; outline: none;">
-                        <option value="Under $500" style="background: #040b19;">Under $500 / month</option>
-                        <option value="$500 - $1,000" style="background: #040b19;">$500 - $1,000 / month</option>
-                        <option value="$1,000 - $5,000" style="background: #040b19;">$1,000 - $5,000 / month</option>
-                        <option value="$5,000+" style="background: #040b19;">$5,000+ / month</option>
+                    <label style="display: block; margin-bottom: 0.4rem; font-size: 0.88rem; color: var(--text-muted);">Monthly Ad Budget ($)</label>
+                    <select name="budget" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; outline: none;">
+                        <option value="Under $500">Under $500 / month</option>
+                        <option value="$500 - $1,000">$500 - $1,000 / month</option>
+                        <option value="$1,000 - $5,000">$1,000 - $5,000 / month</option>
+                        <option value="$5,000+">$5,000+ / month</option>
                     </select>
                 </div>
 
@@ -688,255 +437,50 @@
         </div>
     </section>
 
-    <!-- FLOATING ACTION BUTTON (RIGHT SIDE - WHATSAPP) -->
+    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/923038720939" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- FLOATING LIVE CHATBOT BUTTON (LEFT SIDE) -->
-    <button class="chat-toggle-btn" id="chatToggleBtn" title="Chat with AI Assistant">
-        <i class="fas fa-robot"></i>
-        <span class="chat-badge" id="chatBadge">1</span>
-    </button>
-
-    <!-- LIVE CHAT BOT WINDOW -->
-    <div class="chat-window" id="chatWindow">
-        <div class="chat-header">
-            <div class="chat-header-info">
-                <div class="chat-avatar">
-                    <i class="fas fa-robot"></i>
-                    <span class="chat-online-dot"></span>
-                </div>
-                <div class="chat-title-text">
-                    <h4>Az'Ha AI Assistant</h4>
-                    <p><i class="fas fa-circle" style="font-size: 8px; color: #25d366;"></i> Online | 24/7 Support</p>
-                </div>
-            </div>
-            <button class="chat-close-btn" id="chatCloseBtn"><i class="fas fa-times"></i></button>
-        </div>
-
-        <div class="chat-body" id="chatBody">
-            <!-- Messages inserted dynamically via JavaScript -->
-        </div>
-
-        <div class="chat-footer">
-            <input type="text" id="chatInput" class="chat-input" placeholder="Ask about Meta Ads, Pricing..." autocomplete="off">
-            <button id="chatSendBtn" class="chat-send-btn"><i class="fas fa-paper-plane"></i></button>
-        </div>
-    </div>
-
+    <!-- FOOTER -->
     <footer>
         <div class="social-links">
-            <a href="https://www.facebook.com/Marketingsolutions102/" target="_blank" class="social-btn facebook" title="Follow on Facebook">
+            <a href="https://www.facebook.com/Marketingsolutions102/" target="_blank" class="social-btn" title="Follow on Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/mar_keting102/" target="_blank" class="social-btn instagram" title="Follow on Instagram">
+            <a href="https://www.instagram.com/mar_keting102/" target="_blank" class="social-btn" title="Follow on Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
         <p>&copy; 2026 Marketing Solutions with Az'Ha. All Rights Reserved.</p>
     </footer>
 
-    <!-- EXTERNAL LIBRARIES -->
+    <!-- CALENDLY POPUP SCRIPT -->
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
+    <!-- CALCULATOR JAVASCRIPT -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const chatToggleBtn = document.getElementById('chatToggleBtn');
-            const chatWindow = document.getElementById('chatWindow');
-            const chatCloseBtn = document.getElementById('chatCloseBtn');
-            const chatBody = document.getElementById('chatBody');
-            const chatInput = document.getElementById('chatInput');
-            const chatSendBtn = document.getElementById('chatSendBtn');
-            const chatBadge = document.getElementById('chatBadge');
+        const budgetSlider = document.getElementById('budget-slider');
+        const budgetDisplay = document.getElementById('budget-display');
+        const estRevenue = document.getElementById('est-revenue');
+        const estLeads = document.getElementById('est-leads');
+        const estRoas = document.getElementById('est-roas');
 
-            let chatOpened = false;
+        budgetSlider.addEventListener('input', function() {
+            const val = parseInt(this.value);
+            budgetDisplay.textContent = '$' + val.toLocaleString();
 
-            // Toggle Chat Window
-            const toggleChat = () => {
-                chatWindow.classList.toggle('active');
-                if (chatWindow.classList.contains('active')) {
-                    chatBadge.style.display = 'none';
-                    if (!chatOpened) {
-                        initWelcomeMessage();
-                        chatOpened = true;
-                    }
-                    setTimeout(() => chatInput.focus(), 300);
-                }
-            };
+            let multiplier = 3.5;
+            if(val > 3000) multiplier = 4.2;
+            if(val > 7000) multiplier = 4.8;
 
-            chatToggleBtn.addEventListener('click', toggleChat);
-            chatCloseBtn.addEventListener('click', toggleChat);
+            const rev = Math.round(val * multiplier);
+            const minLeads = Math.round(val / 22);
+            const maxLeads = Math.round(val / 14);
 
-            // Auto Greeting Prompt after 4 seconds
-            setTimeout(() => {
-                if (!chatOpened) {
-                    chatBadge.style.display = 'block';
-                }
-            }, 4000);
-
-            // Append Bot or User Message
-            const appendMessage = (text, sender = 'bot', options = []) => {
-                const msgDiv = document.createElement('div');
-                msgDiv.className = `chat-message ${sender}`;
-
-                let html = `<div class="message-bubble">${text}</div>`;
-                msgDiv.innerHTML = html;
-                chatBody.appendChild(msgDiv);
-
-                if (options.length > 0 && sender === 'bot') {
-                    const optsContainer = document.createElement('div');
-                    optsContainer.className = 'chat-options-container';
-                    options.forEach(opt => {
-                        const btn = document.createElement('button');
-                        btn.className = 'chat-opt-btn';
-                        btn.innerText = opt.label;
-                        btn.onclick = () => handleOptionClick(opt);
-                        optsContainer.appendChild(btn);
-                    });
-                    chatBody.appendChild(optsContainer);
-                }
-
-                chatBody.scrollTop = chatBody.scrollHeight;
-            };
-
-            // Show Typing Indicator
-            const showTyping = () => {
-                const typingDiv = document.createElement('div');
-                typingDiv.className = 'chat-message bot';
-                typingDiv.id = 'chatTyping';
-                typingDiv.innerHTML = `
-                    <div class="typing-indicator">
-                        <div class="typing-dot"></div>
-                        <div class="typing-dot"></div>
-                        <div class="typing-dot"></div>
-                    </div>
-                `;
-                chatBody.appendChild(typingDiv);
-                chatBody.scrollTop = chatBody.scrollHeight;
-            };
-
-            const hideTyping = () => {
-                const typing = document.getElementById('chatTyping');
-                if (typing) typing.remove();
-            };
-
-            // Initial Welcome Message
-            const initWelcomeMessage = () => {
-                showTyping();
-                setTimeout(() => {
-                    hideTyping();
-                    appendMessage(
-                        "👋 **Hello! Welcome to Marketing Solutions with Az'Ha.**\n\nHow can I help you grow your business today?",
-                        'bot',
-                        [
-                            { label: "🚀 Meta Ads Services", value: "services" },
-                            { label: "💰 Pricing Packages", value: "pricing" },
-                            { label: "📅 Book 1-on-1 Call", value: "book" },
-                            { label: "💬 WhatsApp Chat", value: "whatsapp" }
-                        ]
-                    );
-                }, 800);
-            };
-
-            // Option Button Handler
-            const handleOptionClick = (opt) => {
-                appendMessage(opt.label, 'user');
-                processBotResponse(opt.value);
-            };
-
-            // Bot Response Engine
-            const processBotResponse = (userInput) => {
-                const query = userInput.toLowerCase().trim();
-                showTyping();
-
-                setTimeout(() => {
-                    hideTyping();
-
-                    if (query === 'services' || query.includes('service') || query.includes('meta ad') || query.includes('facebook')) {
-                        appendMessage(
-                            "🎯 **Our Core Marketing Services:**\n\n• **Meta Ads Management:** High-ROAS Facebook & Instagram campaigns.\n• **Conversion Tracking:** Pixel & API setup.\n• **Retargeting:** Converting visitors into customers.\n\nWould you like to book a strategy call or check pricing?",
-                            'bot',
-                            [
-                                { label: "💰 View Pricing", value: "pricing" },
-                                { label: "📅 Book Strategy Call", value: "book" }
-                            ]
-                        );
-                    } else if (query === 'pricing' || query.includes('price') || query.includes('cost') || query.includes('package') || query.includes('charge')) {
-                        appendMessage(
-                            "💼 **Custom Agency Packages:**\n\nOur ad management fees range from **$300 to $1,000+/month** depending on your ad spend and campaign complexity.\n\nWe provide tailored quotes on 1-on-1 strategy calls!",
-                            'bot',
-                            [
-                                { label: "📅 Schedule Strategy Call", value: "book" },
-                                { label: "📲 Chat on WhatsApp", value: "whatsapp" }
-                            ]
-                        );
-                    } else if (query === 'book' || query.includes('call') || query.includes('meeting') || query.includes('schedule') || query.includes('calendly')) {
-                        appendMessage(
-                            "📅 You can book a free 30-minute strategy session with Az'Ha right now via Calendly!",
-                            'bot',
-                            [
-                                { label: "⚡ Open Calendly Popup", value: "open_calendly" }
-                            ]
-                        );
-                    } else if (query === 'open_calendly') {
-                        if (window.Calendly) {
-                            Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});
-                        }
-                        appendMessage("Calendly booking popup opened! Select your preferred date & time.", 'bot');
-                    } else if (query === 'whatsapp' || query.includes('whatsapp') || query.includes('number') || query.includes('contact')) {
-                        appendMessage(
-                            "📲 Direct WhatsApp Chat:\nClick below to start a chat with our founder directly on WhatsApp (+92 303 8720939).",
-                            'bot',
-                            [
-                                { label: "👉 Open WhatsApp Chat", value: "open_wa" }
-                            ]
-                        );
-                    } else if (query === 'open_wa') {
-                        window.open("https://wa.me/923038720939", "_blank");
-                        appendMessage("Opening WhatsApp chat in a new tab...", 'bot');
-                    } else if (query.includes('hello') || query.includes('hi') || query.includes('hey') || query.includes('aoa')) {
-                        appendMessage("Hello! How can I assist you with your marketing goals today?", 'bot', [
-                            { label: "🚀 Meta Ads Services", value: "services" },
-                            { label: "📅 Book 1-on-1 Call", value: "book" }
-                        ]);
-                    } else {
-                        appendMessage(
-                            "Thanks for your message! You can book a free consultation call with us or contact us directly on WhatsApp.",
-                            'bot',
-                            [
-                                { label: "📅 Book Consultation Call", value: "book" },
-                                { label: "📲 Direct WhatsApp", value: "whatsapp" },
-                                { label: "📩 Submit Contact Form", value: "goto_form" }
-                            ]
-                        );
-                    }
-                }, 700);
-            };
-
-            // Handle Option for scrolling to Form
-            const handleCustomActions = (val) => {
-                if (val === 'goto_form') {
-                    const formSec = document.getElementById('contact');
-                    if (formSec) formSec.scrollIntoView({ behavior: 'smooth' });
-                    toggleChat();
-                }
-            };
-
-            // User Input Submission
-            const handleSendMessage = () => {
-                const text = chatInput.value.trim();
-                if (text === '') return;
-
-                appendMessage(text, 'user');
-                chatInput.value = '';
-                processBotResponse(text);
-            };
-
-            chatSendBtn.addEventListener('click', handleSendMessage);
-            chatInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') handleSendMessage();
-            });
+            estRevenue.textContent = '$' + rev.toLocaleString();
+            estLeads.textContent = minLeads + ' - ' + maxLeads;
+            estRoas.textContent = multiplier.toFixed(1) + 'x';
         });
     </script>
 </body>
