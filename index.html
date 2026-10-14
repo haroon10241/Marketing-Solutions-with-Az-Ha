@@ -77,8 +77,6 @@
             width: auto;
             object-fit: contain;
             border-radius: 6px;
-            border: none;
-            box-shadow: none;
         }
 
         .logo-text {
@@ -113,20 +111,19 @@
         }
 
         .hero {
-            padding: 180px 2rem 100px;
+            padding: 180px 2rem 90px;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
-            position: relative;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #ffffff 0%, var(--primary-cyan) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .hero p {
@@ -156,12 +153,6 @@
             box-shadow: 0 0 30px rgba(0, 210, 255, 0.7);
         }
 
-        .services {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
         .section-title {
             text-align: center;
             font-size: 2.2rem;
@@ -179,6 +170,71 @@
             margin: 10px auto 0;
             border-radius: 2px;
             box-shadow: var(--glow);
+        }
+
+        /* META ADS UPDATES SECTION */
+        .updates-section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .updates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .update-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .update-card:hover {
+            border-color: var(--primary-cyan);
+            box-shadow: var(--glow);
+            transform: translateY(-4px);
+        }
+
+        .update-tag {
+            display: inline-block;
+            background: rgba(0, 210, 255, 0.15);
+            color: var(--primary-cyan);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+        }
+
+        .update-card h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .update-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .update-date {
+            font-size: 0.8rem;
+            color: var(--primary-cyan);
+            margin-top: 1.2rem;
+            display: block;
+        }
+
+        .services {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .services-grid {
@@ -414,6 +470,7 @@
                 <div class="logo-text">Marketing Solutions <span>With Az'Ha</span></div>
             </a>
             <ul class="nav-links">
+                <li><a href="#updates">Meta Updates</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;">Book Call</a></li>
                 <li><a href="#contact">Contact Form</a></li>
@@ -421,31 +478,60 @@
         </nav>
     </header>
 
+    <!-- HERO SECTION (GENERAL FOR ALL BUSINESSES) -->
     <section class="hero">
-        <h1>Scale Your Business With High-Converting Meta Ads</h1>
-        <p>We craft targeted Facebook & Instagram Ad campaigns designed to maximize your ROI, lower customer acquisition costs, and drive predictable sales growth.</p>
+        <h1>Scale Any Business With High-Converting Meta Ads</h1>
+        <p>Whether you run an E-commerce store, a B2B service, Real Estate, or a Local Business — we engineer high-ROAS Facebook & Instagram Ad campaigns designed to drive predictable revenue and qualified leads.</p>
         <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;" class="cta-btn">
             <i class="fas fa-calendar-alt"></i> Schedule 1-on-1 Strategy Call
         </button>
     </section>
 
+    <!-- META ADS UPDATES SECTION -->
+    <section class="updates-section" id="updates">
+        <h2 class="section-title">Latest Meta Ads Updates & Insights</h2>
+        <div class="updates-grid">
+            <div class="update-card">
+                <span class="update-tag">Algorithm Update</span>
+                <h3>Advantage+ Shopping & Lead Campaigns Optimization</h3>
+                <p>Meta AI updates are prioritizing Advantage+ creative variations. Testing dynamic creative testing (DCT) is now crucial for reducing CPL & CPA across all industries.</p>
+                <span class="update-date"><i class="far fa-calendar"></i> October 2026</span>
+            </div>
+            
+            <div class="update-card">
+                <span class="update-tag">Pixel & CAPI</span>
+                <h3>First-Party Data Integration & Conversions API</h3>
+                <p>With iOS updates and cookie restrictions, pairing Meta Pixel with Server-Side Conversions API is mandatory to recover 25%+ of lost event tracking data.</p>
+                <span class="update-date"><i class="far fa-calendar"></i> October 2026</span>
+            </div>
+
+            <div class="update-card">
+                <span class="update-tag">Creative Strategy</span>
+                <h3>UGC & Direct Response Video Ads</h3>
+                <p>Short-form vertical video ads (Reels format) with strong hooks in the first 3 seconds are outperforming traditional static image banners by 3.2x.</p>
+                <span class="update-date"><i class="far fa-calendar"></i> October 2026</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
     <section class="services" id="services">
-        <h2 class="section-title">Our Expertise</h2>
+        <h2 class="section-title">Our Core Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <i class="fab fa-facebook service-icon"></i>
                 <h3>Meta Ads Campaign Setup</h3>
-                <p>Complete setup of Meta Pixel, Conversions API, audience research, and custom targeting strategy.</p>
+                <p>Complete setup of Meta Pixel, Conversions API, audience research, and custom targeting strategy tailored for your specific niche.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-chart-line service-icon"></i>
-                <h3>Ad Scaling & Optimization</h3>
-                <p>Continuous A/B testing of ad creatives, copy, and targeting to deliver maximum Return on Ad Spend (ROAS).</p>
+                <h3>Ad Scaling & ROAS Optimization</h3>
+                <p>Continuous A/B testing of ad creatives, copy, and targeting to deliver maximum Return on Ad Spend (ROAS) and lower acquisition costs.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-bullseye service-icon"></i>
-                <h3>Retargeting Strategies</h3>
-                <p>Convert lost visitors into loyal buyers through hyper-targeted re-engagement campaigns.</p>
+                <h3>Retargeting & Lead Nurturing</h3>
+                <p>Convert lost visitors and cold leads into loyal paying customers through hyper-targeted re-engagement funnel campaigns.</p>
             </div>
         </div>
     </section>
@@ -453,7 +539,7 @@
     <!-- LEAD GENERATION FORM -->
     <section class="contact-section" id="contact">
         <h2 class="section-title">Send Us a Direct Message</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Prefer text? Fill out the form below and our team will respond within 24 hours.</p>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Fill out the form below and our team will get back to you within 24 hours.</p>
         
         <div style="max-width: 550px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(0, 210, 255, 0.2); text-align: left;">
             <form action="https://formspree.io/f/moejjlkl" method="POST">
@@ -496,7 +582,7 @@
             <span style="cursor:pointer;" onclick="toggleChat()">&times;</span>
         </div>
         <div class="chat-body" id="chatBody">
-            <div class="chat-msg bot">Hi! 👋 Welcome to Marketing Solutions with Az'Ha. How can I help you scale your Meta Ads today?</div>
+            <div class="chat-msg bot">Hi! 👋 Welcome to Marketing Solutions with Az'Ha. How can I help you scale your business with Meta Ads today?</div>
         </div>
         <div class="chat-input-area">
             <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
@@ -548,7 +634,6 @@
             userMsg.className = 'chat-msg user';
             userMsg.textContent = text;
             chatBody.appendChild(userMsg);
-            input.value = '`';
             input.value = '';
 
             chatBody.scrollTop = chatBody.scrollHeight;
