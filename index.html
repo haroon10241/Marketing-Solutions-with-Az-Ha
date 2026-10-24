@@ -1,560 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Solutions with Az'Ha | Meta Ads & Growth Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000080">
+<title>Meta Ads Agency | Marketing Solutions with Az'Ha</title>
+<meta name="description" content="Facebook and Instagram ad management for e-commerce, real estate, local and B2B businesses. Book a 30-minute strategy call.">
+<meta property="og:title" content="Marketing Solutions with Az'Ha | Meta Ads &amp; Growth">
+<meta property="og:description" content="Targeted Facebook and Instagram ad campaigns built for steady leads and sales.">
+<meta property="og:type" content="website">
+<!-- og:image needs a full URL, e.g. https://your-site.com/logo.png -->
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LE44BVPFW5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE44BVPFW5"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-LE44BVPFW5');
+</script>
 
-      gtag('config', 'G-LE44BVPFW5');
-    </script>
+<!-- Meta Pixel: replace YOUR_PIXEL_ID with the ID from Events Manager -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
+</script>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #040b19;
-            --card-bg: rgba(10, 25, 47, 0.85);
-            --primary-cyan: #00d2ff;
-            --accent-blue: #0072ff;
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --glow: 0 0 20px rgba(0, 210, 255, 0.4);
-            --border-glow: rgba(0, 210, 255, 0.2);
-        }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<style>
+/* To recolor the whole site, change --b (hex) and --br (same color as R,G,B) */
+:root{--b:#000080;--br:0,0,128;--tint:#f3f3fb}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:90px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:var(--b);line-height:1.7}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--b);line-height:1.25}
+:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+header :focus-visible{outline-color:#fff}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
+header{position:fixed;top:0;width:100%;z-index:50;background:var(--b);box-shadow:0 2px 12px rgba(var(--br),.25)}
+nav{max-width:1150px;margin:auto;padding:.7rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:600}
+.logo img{height:42px;border-radius:8px}
+.logo span{color:#c9c9f5}
+.links{display:flex;gap:1.6rem;list-style:none;align-items:center}
+.links a{color:#fff;text-decoration:none;font-size:.93rem;font-weight:500;transition:opacity .2s}
+.links a:hover{opacity:.8}
+#menuBtn{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 210, 255, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(0, 114, 255, 0.08) 0%, transparent 40%);
-            background-attachment: fixed;
-        }
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:50px;font:600 .95rem 'DM Sans',sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
+.btn-p{background:var(--b);color:#fff;box-shadow:0 8px 22px rgba(var(--br),.3)}
+.btn-p:hover{transform:translateY(-2px);background:#00005c}
+.btn-o{border:1px solid var(--b);color:var(--b);background:transparent}
+.btn-o:hover{background:rgba(var(--br),.08)}
+.links .btn{padding:9px 20px;background:#fff;color:var(--b);box-shadow:none}
+.links .btn:hover{background:#e8e8f7;color:var(--b)}
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(4, 11, 25, 0.92);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-glow);
-        }
+.hero{padding:170px 1.5rem 90px;text-align:center;max-width:860px;margin:auto}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.4rem);margin-bottom:1.3rem}
+.hero p{font-size:1.1rem;margin:0 auto 2.2rem;max-width:680px}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.alt{background:var(--tint);border-block:1px solid rgba(var(--br),.12)}
+.wrap{max-width:1150px;margin:auto;padding:80px 1.5rem}
+h2.t{text-align:center;font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:.6rem}
+.sub{text-align:center;margin:0 auto 2.8rem;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem}
+.card{background:#fff;border:1px solid rgba(var(--br),.25);border-radius:20px;padding:2rem;box-shadow:0 6px 20px rgba(var(--br),.08)}
+.card>i{font-size:1.8rem;margin-bottom:1rem;display:block}
+.card h3{font-size:1.2rem;margin-bottom:.6rem}
+.card p{font-size:.94rem}
+.num{width:40px;height:40px;border-radius:50%;background:var(--b);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;margin-bottom:1rem}
+.quote p{font-style:italic}
+.who{margin-top:1rem;font-size:.86rem;font-weight:600}
+.about{max-width:700px;margin:auto;text-align:center}
+.about p{margin-top:1rem}
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+details{background:#fff;border:1px solid rgba(var(--br),.25);border-radius:14px;padding:1.1rem 1.4rem;margin:0 auto .9rem;max-width:760px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:1.3rem;line-height:1}
+details[open] summary::after{content:'\2013'}
+details p{margin-top:.8rem;font-size:.94rem}
 
-        .logo-img {
-            height: 48px;
-            width: auto;
-            object-fit: contain;
-            border-radius: 6px;
-        }
+.form{max-width:540px;margin:auto;background:#fff;padding:2.2rem;border-radius:20px;border:1px solid rgba(var(--br),.25);box-shadow:0 6px 20px rgba(var(--br),.08)}
+.form label{display:block;margin-bottom:.35rem;font-size:.88rem;font-weight:500}
+.form input,.form select{width:100%;padding:12px 14px;margin-bottom:1.1rem;background:#fff;border:1px solid rgba(var(--br),.4);border-radius:10px;color:var(--b);font:inherit;outline:none}
+.form ::placeholder{color:rgba(var(--br),.5)}
+.form input:focus,.form select:focus{border-color:var(--b);box-shadow:0 0 0 3px rgba(var(--br),.15)}
+.form .btn{width:100%;justify-content:center}
+#fmsg{margin-top:1rem;text-align:center;font-size:.93rem}
+.ok{color:var(--b)}.err{color:#d93025}
 
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+footer{text-align:center;padding:2.8rem 1.5rem 5.5rem;color:var(--b);font-size:.92rem;border-top:1px solid rgba(var(--br),.18)}
+footer a{color:var(--b)}
+.soc{display:flex;justify-content:center;gap:1rem;margin-bottom:1.2rem}
+.soc a{width:46px;height:46px;border-radius:50%;border:1px solid var(--b);color:var(--b);display:flex;align-items:center;justify-content:center;font-size:1.15rem;text-decoration:none;transition:background .2s,color .2s}
+.soc a:hover{background:var(--b);color:#fff}
+.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:var(--b);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.9rem;box-shadow:0 8px 24px rgba(var(--br),.4);z-index:60;text-decoration:none}
 
-        .logo-text span {
-            color: var(--primary-cyan);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            transition: 0.3s;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-cyan);
-            text-shadow: var(--glow);
-        }
-
-        .hero {
-            padding: 180px 2rem 100px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--primary-cyan), #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            color: #fff;
-            padding: 15px 34px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: 0.3s;
-            box-shadow: var(--glow);
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(0, 210, 255, 0.7);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
-            color: #fff;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-cyan);
-            margin: 10px auto 0;
-            border-radius: 2px;
-            box-shadow: var(--glow);
-        }
-
-        .services {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-glow);
-            padding: 2.5rem 2rem;
-            border-radius: 15px;
-            transition: 0.3s;
-            backdrop-filter: blur(8px);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-cyan);
-            box-shadow: var(--glow);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-cyan);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .contact-section {
-            padding: 80px 2rem;
-            text-align: center;
-            background: rgba(10, 25, 47, 0.5);
-            border-top: 1px solid var(--border-glow);
-        }
-
-        /* AI CHATBOT STYLES */
-        .chatbot-container {
-            position: fixed;
-            bottom: 95px;
-            right: 30px;
-            width: 350px;
-            height: 450px;
-            background: rgba(10, 25, 47, 0.95);
-            border: 1px solid var(--primary-cyan);
-            border-radius: 15px;
-            box-shadow: var(--glow);
-            display: none;
-            flex-direction: column;
-            z-index: 999;
-            backdrop-filter: blur(10px);
-            overflow: hidden;
-        }
-
-        .chat-header {
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            color: #fff;
-            padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-        }
-
-        .chat-body {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-size: 0.9rem;
-        }
-
-        .chat-msg {
-            padding: 10px 14px;
-            border-radius: 12px;
-            max-width: 85%;
-            word-wrap: break-word;
-            line-height: 1.4;
-        }
-
-        .chat-msg.bot {
-            background: rgba(0, 210, 255, 0.15);
-            color: #fff;
-            align-self: flex-start;
-            border: 1px solid rgba(0, 210, 255, 0.3);
-        }
-
-        .chat-msg.user {
-            background: var(--accent-blue);
-            color: #fff;
-            align-self: flex-end;
-        }
-
-        .chat-input-area {
-            display: flex;
-            padding: 10px;
-            border-top: 1px solid rgba(0, 210, 255, 0.2);
-            background: rgba(4, 11, 25, 0.9);
-        }
-
-        .chat-input-area input {
-            flex: 1;
-            padding: 8px 12px;
-            background: transparent;
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            border-radius: 20px;
-            color: #fff;
-            outline: none;
-        }
-
-        .chat-input-area button {
-            background: var(--primary-cyan);
-            border: none;
-            color: #000;
-            padding: 8px 16px;
-            margin-left: 8px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .chat-toggle-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-cyan));
-            color: #fff;
-            padding: 14px 24px;
-            border-radius: 30px;
-            box-shadow: var(--glow);
-            cursor: pointer;
-            border: none;
-            font-weight: 700;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-        }
-
-        .chat-toggle-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 210, 255, 0.8);
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            border-top: 1px solid var(--border-glow);
-            background: rgba(4, 11, 25, 0.95);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(10, 25, 47, 0.8);
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            color: var(--primary-cyan);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.3rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-5px);
-            color: #ffffff;
-            border-color: var(--primary-cyan);
-            box-shadow: var(--glow);
-        }
-
-        .social-btn.facebook:hover { background: #1877f2; }
-        .social-btn.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
-            .chatbot-container { right: 15px; width: 320px; }
-            .chat-toggle-btn { right: 20px; padding: 12px 18px; font-size: 0.9rem; }
-        }
-    </style>
+@media(max-width:768px){
+#menuBtn{display:block}
+.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--b);padding:1.3rem;gap:1.1rem;border-top:1px solid rgba(255,255,255,.25)}
+.links.open{display:flex}
+.logo{font-size:.82rem;line-height:1.25}
+.hero{padding-top:135px}
+.wrap{padding:60px 1.2rem}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="#" class="logo-container">
-                <img src="logo.png" alt="Marketing Solutions Logo" class="logo-img" onerror="this.style.display='none'">
-                <div class="logo-text">Marketing Solutions <span>With Az'Ha</span></div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;">Book Call</a></li>
-                <li><a href="#contact">Contact Form</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+<nav>
+<a href="#" class="logo"><img src="logo.png" alt="Marketing Solutions logo" onerror="this.remove()"><div>Marketing Solutions <span>With Az'Ha</span></div></a>
+<button id="menuBtn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+<ul class="links">
+<li><a href="#services">Services</a></li>
+<li><a href="#process">How it works</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="https://calendly.com/haroonishaq77/30min" data-cal class="btn btn-p">Book a call</a></li>
+</ul>
+</nav>
+</header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Scale Any Business With High-Converting <span>Meta Ads</span></h1>
-        <p>Whether you run an E-commerce store, Real Estate, Local Business, or B2B Service — we engineer targeted Facebook & Instagram Ad campaigns designed to drive predictable revenue and high-quality leads.</p>
-        <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/haroonishaq77/30min'});return false;" class="cta-btn">
-            <i class="fas fa-calendar-alt"></i> Schedule 1-on-1 Strategy Call
-        </button>
-    </section>
+<section class="hero">
+<h1>Scale your business with Meta Ads that convert</h1>
+<p>E-commerce, real estate, local business or B2B service: we build targeted Facebook and Instagram ad campaigns designed to bring steady revenue and quality leads.</p>
+<div class="cta-row">
+<a href="https://calendly.com/haroonishaq77/30min" data-cal class="btn btn-p"><i class="fas fa-calendar-alt"></i> Book a strategy call</a>
+<a href="https://wa.me/923038720939?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Meta%20Ads%20management" target="_blank" rel="noopener" class="btn btn-o wa-track"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+</div>
+</section>
 
-    <!-- SERVICES SECTION -->
-    <section class="services" id="services">
-        <h2 class="section-title">Our Core Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fab fa-facebook service-icon"></i>
-                <h3>Meta Ads Campaign Setup</h3>
-                <p>Complete setup of Meta Pixel, Conversions API, audience research, and custom targeting strategy tailored for your specific industry.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-chart-line service-icon"></i>
-                <h3>Ad Scaling & ROAS Optimization</h3>
-                <p>Continuous A/B testing of ad creatives, copy, and targeting to deliver maximum Return on Ad Spend (ROAS) and lower acquisition costs.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-bullseye service-icon"></i>
-                <h3>Retargeting & Funnel Strategy</h3>
-                <p>Convert lost visitors and cold traffic into loyal paying customers through hyper-targeted re-engagement funnel campaigns.</p>
-            </div>
-        </div>
-    </section>
+<section class="wrap" id="services">
+<h2 class="t">What we do</h2>
+<p class="sub">Everything you need to run Meta ads that pay for themselves.</p>
+<div class="grid">
+<div class="card"><i class="fab fa-facebook"></i><h3>Meta Ads campaign setup</h3><p>Meta Pixel, Conversions API, audience research and a targeting plan built for your industry.</p></div>
+<div class="card"><i class="fas fa-chart-line"></i><h3>Scaling and ROAS optimization</h3><p>Ongoing testing of creatives, copy and audiences to raise return on ad spend and lower your cost per customer.</p></div>
+<div class="card"><i class="fas fa-bullseye"></i><h3>Retargeting and funnels</h3><p>Bring back visitors who didn't buy and turn cold traffic into paying customers with re-engagement campaigns.</p></div>
+</div>
+</section>
 
-    <!-- LEAD GENERATION FORM -->
-    <section class="contact-section" id="contact">
-        <h2 class="section-title">Send Us a Direct Message</h2>
-        <p style="margin-bottom: 2rem; color: var(--text-muted);">Fill out the form below and our team will respond within 24 hours.</p>
-        
-        <div style="max-width: 550px; margin: 0 auto; background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid var(--border-glow); text-align: left;">
-            <form action="https://formspree.io/f/moejjlkl" method="POST">
-                <div style="margin-bottom: 1.2rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Full Name</label>
-                    <input type="text" name="name" placeholder="Enter your full name" required style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid var(--border-glow); border-radius: 8px; color: #fff; outline: none;">
-                </div>
-                
-                <div style="margin-bottom: 1.2rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Email Address</label>
-                    <input type="email" name="email" placeholder="you@company.com" required style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid var(--border-glow); border-radius: 8px; color: #fff; outline: none;">
-                </div>
+<section class="alt" id="process">
+<div class="wrap">
+<h2 class="t">How it works</h2>
+<p class="sub">Three simple steps from first call to growing results.</p>
+<div class="grid">
+<div class="card"><div class="num">1</div><h3>Strategy call</h3><p>We talk about your offer, your customers and your goals in a 30-minute 1-on-1 call.</p></div>
+<div class="card"><div class="num">2</div><h3>Setup and launch</h3><p>We set up tracking, build your audiences and creatives, and launch the first campaigns.</p></div>
+<div class="card"><div class="num">3</div><h3>Test and scale</h3><p>We review the numbers, cut what doesn't work and put more budget behind what does.</p></div>
+</div>
+</div>
+</section>
 
-                <div style="margin-bottom: 1.2rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Phone Number</label>
-                    <input type="tel" name="phone" placeholder="+00 000 0000000" required style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid var(--border-glow); border-radius: 8px; color: #fff; outline: none;">
-                </div>
+<!-- Replace each review with a real one from your clients (with their permission) -->
+<section class="wrap" id="reviews">
+<h2 class="t">What clients say</h2>
+<p class="sub">Real words from businesses we've worked with.</p>
+<div class="grid">
+<div class="card quote"><p>Paste a real client review here. Short and specific works best.</p><div class="who">Client name, business</div></div>
+<div class="card quote"><p>Paste a real client review here. Mention the result they got.</p><div class="who">Client name, business</div></div>
+<div class="card quote"><p>Paste a real client review here. Keep it in the client's own words.</p><div class="who">Client name, business</div></div>
+</div>
+</section>
 
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Monthly Ad Budget ($)</label>
-                    <select name="budget" style="width: 100%; padding: 12px; background: rgba(4, 11, 25, 0.8); border: 1px solid var(--border-glow); border-radius: 8px; color: #fff; outline: none;">
-                        <option value="Under $500" style="background: #040b19;">Under $500 / month</option>
-                        <option value="$500 - $1,000" style="background: #040b19;">$500 - $1,000 / month</option>
-                        <option value="$1,000 - $5,000" style="background: #040b19;">$1,000 - $5,000 / month</option>
-                        <option value="$5,000+" style="background: #040b19;">$5,000+ / month</option>
-                    </select>
-                </div>
+<!-- Edit this text and add your photo above it if you like -->
+<section class="alt">
+<div class="wrap about">
+<h2 class="t">Who runs your ads</h2>
+<p>I'm a Meta Ads specialist. I focus on turning ad spend into leads and sales with clear strategy, steady testing and straightforward reporting.</p>
+</div>
+</section>
 
-                <button type="submit" class="cta-btn" style="width: 100%; justify-content: center;">Submit Request</button>
-            </form>
-        </div>
-    </section>
+<section class="wrap" id="faq">
+<h2 class="t">Common questions</h2>
+<p class="sub">Quick answers before you book.</p>
+<details><summary>How much ad budget do I need?</summary><p>It depends on your industry, offer and goals. On the strategy call we'll suggest a realistic starting budget.</p></details>
+<details><summary>How soon will I see results?</summary><p>Meta campaigns need a short testing phase. We check the data early and keep improving, so results build over time. Nobody can honestly promise overnight results.</p></details>
+<details><summary>Do you work in my industry?</summary><p>We work with e-commerce, real estate, local businesses and B2B services. Not sure if you fit? Ask us on the call.</p></details>
+<details><summary>What happens on the strategy call?</summary><p>It's a 1-on-1 conversation where we look at your offer, audience and any current ads, then outline the next steps.</p></details>
+</section>
 
-    <!-- AI CHATBOT WIDGET -->
-    <button class="chat-toggle-btn" onclick="toggleChat()"><i class="fas fa-robot"></i> AI Assistant</button>
-    
-    <div class="chatbot-container" id="chatbot">
-        <div class="chat-header">
-            <span><i class="fas fa-robot"></i> Az'Ha AI Assistant</span>
-            <span style="cursor:pointer;" onclick="toggleChat()">&times;</span>
-        </div>
-        <div class="chat-body" id="chatBody">
-            <div class="chat-msg bot">Hi! 👋 Welcome to Marketing Solutions with Az'Ha. How can I help you scale your business with Meta Ads today?</div>
-        </div>
-        <div class="chat-input-area">
-            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
+<section class="alt" id="contact">
+<div class="wrap">
+<h2 class="t">Send us a message</h2>
+<p class="sub">Fill in the form and we'll reply within 24 hours.</p>
+<div class="form">
+<form id="lead" action="https://formspree.io/f/moejjlkl" method="POST">
+<input type="hidden" name="_subject" value="New lead from website">
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+<label for="n">Full name</label>
+<input id="n" type="text" name="name" placeholder="Your full name" required>
+<label for="e">Email address</label>
+<input id="e" type="email" name="email" placeholder="you@company.com" required>
+<label for="p">Phone number</label>
+<input id="p" type="tel" name="phone" placeholder="+92 300 0000000" required>
+<label for="b">Monthly ad budget (approx. in USD)</label>
+<select id="b" name="budget">
+<option value="Under $500">Under $500 / month</option>
+<option value="$500 - $1,000">$500 - $1,000 / month</option>
+<option value="$1,000 - $5,000">$1,000 - $5,000 / month</option>
+<option value="$5,000+">$5,000+ / month</option>
+</select>
+<button type="submit" class="btn btn-p">Send request</button>
+<div id="fmsg" role="status"></div>
+</form>
+</div>
+</div>
+</section>
 
-    <!-- FOOTER WITH SOCIAL LINKS -->
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/Marketingsolutions102/" target="_blank" class="social-btn facebook" title="Follow on Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/mar_keting102/" target="_blank" class="social-btn instagram" title="Follow on Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <p>&copy; 2026 Marketing Solutions with Az'Ha. All Rights Reserved.</p>
-    </footer>
+<a href="https://wa.me/923038720939" target="_blank" rel="noopener" class="wa wa-track" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- CALENDLY POPUP SCRIPT -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<footer>
+<div class="soc">
+<a href="https://www.facebook.com/Marketingsolutions102/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/mar_keting102/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+<p>WhatsApp / Phone: <a href="tel:+923038720939">+92 303 8720939</a></p>
+<p style="margin-top:.5rem">&copy; 2026 Marketing Solutions with Az'Ha. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
 
-    <!-- CHATBOT JAVASCRIPT -->
-    <script>
-        function toggleChat() {
-            const chat = document.getElementById('chatbot');
-            chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
-        }
-
-        function handleKeyPress(e) {
-            if (e.key === 'Enter') sendMessage();
-        }
-
-        function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const text = input.value.trim();
-            if (!text) return;
-
-            const chatBody = document.getElementById('chatBody');
-
-            // User Message
-            const userMsg = document.createElement('div');
-            userMsg.className = 'chat-msg user';
-            userMsg.textContent = text;
-            chatBody.appendChild(userMsg);
-            input.value = '';
-
-            chatBody.scrollTop = chatBody.scrollHeight;
-
-            // Bot Smart Response
-            setTimeout(() => {
-                const botMsg = document.createElement('div');
-                botMsg.className = 'chat-msg bot';
-
-                const lowerText = text.toLowerCase();
-                if (lowerText.includes('contact') || lowerText.includes('number') || lowerText.includes('phone') || lowerText.includes('whatsapp') || lowerText.includes('call') || lowerText.includes('reach')) {
-                    botMsg.innerHTML = "You can directly connect with Az'Ha via WhatsApp/Phone: <strong>+92 303 8720939</strong> or email us via the contact form on this page.";
-                } else if (lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('rate') || lowerText.includes('package')) {
-                    botMsg.textContent = "Our ad management packages depend on your budget & goals. Book a 1-on-1 Strategy Call using the button above to get a customized strategy!";
-                } else if (lowerText.includes('service') || lowerText.includes('meta') || lowerText.includes('facebook') || lowerText.includes('instagram')) {
-                    botMsg.textContent = "We offer Meta Ads strategy, Pixel & Conversions API setup, Creative A/B testing, ROAS scaling, and Retargeting campaigns.";
-                } else {
-                    botMsg.textContent = "Thanks for reaching out! You can schedule a strategy call or ask me for our direct contact number.";
-                }
-
-                chatBody.appendChild(botMsg);
-                chatBody.scrollTop = chatBody.scrollHeight;
-            }, 800);
-        }
-    </script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+const $=s=>document.querySelector(s),CAL='https://calendly.com/haroonishaq77/30min';
+$('#menuBtn').onclick=()=>$('.links').classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>$('.links').classList.remove('open')));
+// Opens the Calendly popup; if it hasn't loaded, the link opens Calendly normally
+document.querySelectorAll('[data-cal]').forEach(a=>a.addEventListener('click',e=>{if(window.Calendly){e.preventDefault();Calendly.initPopupWidget({url:CAL});}}));
+document.querySelectorAll('.wa-track').forEach(a=>a.addEventListener('click',()=>{window.fbq&&fbq('track','Contact');window.gtag&&gtag('event','whatsapp_click');}));
+addEventListener('message',e=>{if(e.data&&e.data.event==='calendly.event_scheduled'){window.fbq&&fbq('track','Schedule');window.gtag&&gtag('event','schedule_call');}});
+$('#lead').addEventListener('submit',async e=>{
+e.preventDefault();
+const f=e.target,m=$('#fmsg'),b=f.querySelector('button');
+b.disabled=true;b.textContent='Sending...';m.textContent='';
+try{
+const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+if(!r.ok)throw 0;
+f.reset();m.className='ok';m.textContent="Thank you! We'll get back to you within 24 hours.";
+window.fbq&&fbq('track','Lead');window.gtag&&gtag('event','generate_lead');
+}catch(_){m.className='err';m.textContent="Couldn't send your request. Please try again or message us on WhatsApp.";}
+b.disabled=false;b.textContent='Send request';
+});
+</script>
 </body>
 </html>
