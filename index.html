@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#000080">
+<meta name="theme-color" content="#07076e">
 <title>Meta Ads Agency | Marketing Solutions with Az'Ha</title>
 <meta name="description" content="Facebook and Instagram ad management for e-commerce, real estate, local and B2B businesses. Book a 30-minute strategy call.">
 <meta property="og:title" content="Marketing Solutions with Az'Ha | Meta Ads &amp; Growth">
@@ -31,16 +31,16 @@ fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <style>
 /* To recolor the whole site, change --b (hex) and --br (same color as R,G,B) */
-:root{--b:#000080;--br:0,0,128;--tint:#f3f3fb}
+:root{--b:#000080;--br:0,0,128;--tint:#f3f3fb;--nv:#07076e;--nvr:7,7,110}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 section[id]{scroll-margin-top:90px}
 body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:var(--b);line-height:1.7}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--b);line-height:1.25}
 :focus-visible{outline:2px solid var(--b);outline-offset:3px}
-header :focus-visible{outline-color:#fff}
+header :focus-visible,.card :focus-visible,.form :focus-visible,details :focus-visible{outline-color:#fff}
 
-header{position:fixed;top:0;width:100%;z-index:50;background:var(--b);box-shadow:0 2px 12px rgba(var(--br),.25)}
+header{position:fixed;top:0;width:100%;z-index:50;background:var(--nv);box-shadow:0 2px 12px rgba(var(--nvr),.3)}
 nav{max-width:1150px;margin:auto;padding:.7rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:600}
 .logo img{height:42px;border-radius:8px}
@@ -51,12 +51,12 @@ nav{max-width:1150px;margin:auto;padding:.7rem 1.5rem;display:flex;justify-conte
 #menuBtn{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
 
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:50px;font:600 .95rem 'DM Sans',sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
-.btn-p{background:var(--b);color:#fff;box-shadow:0 8px 22px rgba(var(--br),.3)}
-.btn-p:hover{transform:translateY(-2px);background:#00005c}
-.btn-o{border:1px solid var(--b);color:var(--b);background:transparent}
-.btn-o:hover{background:rgba(var(--br),.08)}
-.links .btn{padding:9px 20px;background:#fff;color:var(--b);box-shadow:none}
-.links .btn:hover{background:#e8e8f7;color:var(--b)}
+.btn-p{background:var(--nv);color:#fff;box-shadow:0 8px 22px rgba(var(--nvr),.3)}
+.btn-p:hover{transform:translateY(-2px);background:#04044f}
+.btn-wa{background:#25d366;color:#073b1e;box-shadow:0 8px 22px rgba(37,211,102,.35)}
+.btn-wa:hover{transform:translateY(-2px);background:#1ebe5a}
+.links .btn{padding:9px 20px;background:#fff;color:var(--nv);box-shadow:none}
+.links .btn:hover{background:#e8e8f7;color:var(--nv)}
 
 .hero{padding:170px 1.5rem 90px;text-align:center;max-width:860px;margin:auto}
 .hero h1{font-size:clamp(2.1rem,5.5vw,3.4rem);margin-bottom:1.3rem}
@@ -68,42 +68,46 @@ nav{max-width:1150px;margin:auto;padding:.7rem 1.5rem;display:flex;justify-conte
 h2.t{text-align:center;font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:.6rem}
 .sub{text-align:center;margin:0 auto 2.8rem;max-width:560px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem}
-.card{background:#fff;border:1px solid rgba(var(--br),.25);border-radius:20px;padding:2rem;box-shadow:0 6px 20px rgba(var(--br),.08)}
-.card>i{font-size:1.8rem;margin-bottom:1rem;display:block}
-.card h3{font-size:1.2rem;margin-bottom:.6rem}
+.card{background:var(--nv);color:#fff;border:1px solid var(--nv);border-radius:20px;padding:2rem;box-shadow:0 8px 24px rgba(var(--nvr),.25)}
+.card>i{font-size:1.8rem;margin-bottom:1rem;display:block;color:#fff}
+.card h3{font-size:1.2rem;margin-bottom:.6rem;color:#fff}
 .card p{font-size:.94rem}
-.num{width:40px;height:40px;border-radius:50%;background:var(--b);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;margin-bottom:1rem}
+.num{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--nv);display:flex;align-items:center;justify-content:center;font-weight:600;margin-bottom:1rem}
 .quote p{font-style:italic}
-.who{margin-top:1rem;font-size:.86rem;font-weight:600}
+.who{margin-top:1rem;font-size:.86rem;font-weight:600;color:#cfcff7}
 .about{max-width:700px;margin:auto;text-align:center}
 .about p{margin-top:1rem}
 
-details{background:#fff;border:1px solid rgba(var(--br),.25);border-radius:14px;padding:1.1rem 1.4rem;margin:0 auto .9rem;max-width:760px}
+details{background:var(--nv);color:#fff;border:1px solid var(--nv);border-radius:14px;padding:1.1rem 1.4rem;margin:0 auto .9rem;max-width:760px}
 summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
 summary::-webkit-details-marker{display:none}
 summary::after{content:'+';font-size:1.3rem;line-height:1}
 details[open] summary::after{content:'\2013'}
 details p{margin-top:.8rem;font-size:.94rem}
 
-.form{max-width:540px;margin:auto;background:#fff;padding:2.2rem;border-radius:20px;border:1px solid rgba(var(--br),.25);box-shadow:0 6px 20px rgba(var(--br),.08)}
+.form{max-width:540px;margin:auto;background:var(--nv);color:#fff;padding:2.2rem;border-radius:20px;border:1px solid var(--nv);box-shadow:0 8px 24px rgba(var(--nvr),.25)}
 .form label{display:block;margin-bottom:.35rem;font-size:.88rem;font-weight:500}
-.form input,.form select{width:100%;padding:12px 14px;margin-bottom:1.1rem;background:#fff;border:1px solid rgba(var(--br),.4);border-radius:10px;color:var(--b);font:inherit;outline:none}
+.form input,.form select{width:100%;padding:12px 14px;margin-bottom:1.1rem;background:#fff;border:1px solid #fff;border-radius:10px;color:var(--b);font:inherit;outline:none}
 .form ::placeholder{color:rgba(var(--br),.5)}
-.form input:focus,.form select:focus{border-color:var(--b);box-shadow:0 0 0 3px rgba(var(--br),.15)}
+.form input:focus,.form select:focus{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
 .form .btn{width:100%;justify-content:center}
+.form .btn-p{background:#fff;color:var(--nv);box-shadow:none}
+.form .btn-p:hover{background:#e8e8f7}
 #fmsg{margin-top:1rem;text-align:center;font-size:.93rem}
-.ok{color:var(--b)}.err{color:#d93025}
+.ok{color:#fff}.err{color:#ff9a9a}
 
 footer{text-align:center;padding:2.8rem 1.5rem 5.5rem;color:var(--b);font-size:.92rem;border-top:1px solid rgba(var(--br),.18)}
 footer a{color:var(--b)}
 .soc{display:flex;justify-content:center;gap:1rem;margin-bottom:1.2rem}
-.soc a{width:46px;height:46px;border-radius:50%;border:1px solid var(--b);color:var(--b);display:flex;align-items:center;justify-content:center;font-size:1.15rem;text-decoration:none;transition:background .2s,color .2s}
-.soc a:hover{background:var(--b);color:#fff}
-.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:var(--b);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.9rem;box-shadow:0 8px 24px rgba(var(--br),.4);z-index:60;text-decoration:none}
+.soc a{width:46px;height:46px;border-radius:50%;border:1px solid var(--b);color:var(--b);display:flex;align-items:center;justify-content:center;font-size:1.15rem;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.soc a.fb:hover{color:#1877f2;border-color:#1877f2;background:#eef4ff}
+.soc a.ig:hover{border-color:#dc2743;background:#fff0f3}
+.soc a.ig:hover i{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.9rem;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:60;text-decoration:none}
 
 @media(max-width:768px){
 #menuBtn{display:block}
-.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--b);padding:1.3rem;gap:1.1rem;border-top:1px solid rgba(255,255,255,.25)}
+.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--nv);padding:1.3rem;gap:1.1rem;border-top:1px solid rgba(255,255,255,.25)}
 .links.open{display:flex}
 .logo{font-size:.82rem;line-height:1.25}
 .hero{padding-top:135px}
@@ -133,7 +137,7 @@ footer a{color:var(--b)}
 <p>E-commerce, real estate, local business or B2B service: we build targeted Facebook and Instagram ad campaigns designed to bring steady revenue and quality leads.</p>
 <div class="cta-row">
 <a href="https://calendly.com/haroonishaq77/30min" data-cal class="btn btn-p"><i class="fas fa-calendar-alt"></i> Book a strategy call</a>
-<a href="https://wa.me/923038720939?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Meta%20Ads%20management" target="_blank" rel="noopener" class="btn btn-o wa-track"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+<a href="https://wa.me/923038720939?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Meta%20Ads%20management" target="_blank" rel="noopener" class="btn btn-wa wa-track"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
 </div>
 </section>
 
@@ -219,8 +223,8 @@ footer a{color:var(--b)}
 
 <footer>
 <div class="soc">
-<a href="https://www.facebook.com/Marketingsolutions102/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/mar_keting102/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/Marketingsolutions102/" target="_blank" rel="noopener" class="fb" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/mar_keting102/" target="_blank" rel="noopener" class="ig" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
 </div>
 <p>WhatsApp / Phone: <a href="tel:+923038720939">+92 303 8720939</a></p>
 <p style="margin-top:.5rem">&copy; 2026 Marketing Solutions with Az'Ha. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
