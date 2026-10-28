@@ -58,19 +58,17 @@
 }
 </script>
 
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE44BVPFW5"></script>
+<!-- Google Analytics (GA4) in consent mode: no analytics cookies until the visitor accepts -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE44BVPFW5"></script>
+<script>
 gtag('js',new Date());gtag('config','G-LE44BVPFW5');
 </script>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1597576814822529');fbq('track','PageView');
-</script>
-<!-- End Meta Pixel Code -->
+<!-- Meta Pixel: loaded only after cookie consent (see script at the end of the page) -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,6 +151,15 @@ footer a{color:var(--b)}
 .soc a.ig:hover i{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.9rem;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:60;text-decoration:none}
 
+#cookieBanner{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;z-index:70;background:var(--nv);color:#fff;padding:1.2rem 1.4rem;border-radius:16px;box-shadow:0 12px 32px rgba(var(--nvr),.4);font-size:.9rem;line-height:1.55}
+#cookieBanner[hidden]{display:none}
+#cookieBanner p{margin-bottom:.9rem}
+#cookieBanner a{color:#fff;text-decoration:underline}
+#cookieBanner .ck-row{display:flex;gap:10px}
+#cookieBanner button{flex:1;padding:10px 18px;border-radius:50px;border:1px solid #fff;background:#fff;color:var(--nv);font:600 .9rem 'DM Sans',sans-serif;cursor:pointer;transition:background .2s}
+#cookieBanner button:hover{background:#e8e8f7}
+#cookieBanner :focus-visible{outline-color:#fff}
+
 @media(max-width:768px){
 #menuBtn{display:block}
 .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--nv);padding:1.3rem;gap:1.1rem;border-top:1px solid rgba(255,255,255,.25)}
@@ -165,8 +172,6 @@ footer a{color:var(--b)}
 </style>
 </head>
 <body>
-<!-- Meta Pixel noscript fallback -->
-<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1597576814822529&amp;ev=PageView&amp;noscript=1"></noscript>
 
 <header>
 <nav>
@@ -281,12 +286,37 @@ footer a{color:var(--b)}
 <a href="https://www.instagram.com/mar_keting102/" target="_blank" rel="noopener" class="ig" title="Instagram" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
 </div>
 <p>WhatsApp / Phone: <a href="tel:+923038720939">+92 303 8720939</a></p>
-<p style="margin-top:.5rem">&copy; 2026 Marketing Solutions with Az'Ha. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+<p style="margin-top:.5rem">&copy; 2026 Marketing Solutions with Az'Ha. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" id="cookieSettings">Cookie settings</a></p>
 </footer>
+
+<div id="cookieBanner" role="region" aria-label="Cookie consent" hidden>
+<p>We use cookies to see how visitors use this site and to measure our ads (Google Analytics and Meta Pixel). You can accept or decline. See our <a href="privacy.html">Privacy Policy</a>.</p>
+<div class="ck-row"><button type="button" id="ckAccept">Accept</button><button type="button" id="ckDecline">Decline</button></div>
+</div>
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
 const $=s=>document.querySelector(s),CAL='https://calendly.com/haroonishaq77/30min';
+// Cookie consent: Meta Pixel loads only after Accept; GA4 switches from denied to granted
+const CK='cookie-consent';
+const getC=()=>{try{return localStorage.getItem(CK)}catch(_){return null}};
+const setC=v=>{try{localStorage.setItem(CK,v)}catch(_){}};
+function loadPixel(){
+if(window.fbq){fbq('consent','grant');return;}
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1597576814822529');fbq('track','PageView');
+}
+function applyConsent(v){
+if(v==='granted'){gtag('consent','update',{analytics_storage:'granted'});loadPixel();}
+else{gtag('consent','update',{analytics_storage:'denied'});window.fbq&&fbq('consent','revoke');}
+}
+const bar=$('#cookieBanner');
+function choose(v){setC(v);bar.hidden=true;applyConsent(v);}
+$('#ckAccept').onclick=()=>choose('granted');
+$('#ckDecline').onclick=()=>choose('denied');
+$('#cookieSettings').addEventListener('click',e=>{e.preventDefault();bar.hidden=false;});
+const saved=getC();
+if(saved==='granted')applyConsent('granted');else if(saved!=='denied')bar.hidden=false;
 $('#menuBtn').onclick=()=>$('.links').classList.toggle('open');
 document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>$('.links').classList.remove('open')));
 // Opens the Calendly popup; if it hasn't loaded, the link opens Calendly normally
